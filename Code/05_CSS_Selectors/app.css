@@ -29,3 +29,54 @@ span {
     color: #f1faee;
     font-size: 16px;
 }
+
+.post a {
+    color: #457b9d;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+footer a {
+    color: red;
+}
+
+input + button {
+    background-color: pink;
+}
+
+h2 + button {
+    font-size: 20px;
+}
+
+footer > a {
+    color: green;
+}
+
+input[type="password"] {
+    color: greenyellow;
+}
+
+section.post {
+    background-color: purple;
+}
+
+a[href*="google"] {
+    color: magenta;
+}
+
+.post button:hover {
+    background-color: darkred;
+    color: #f1faee;
+}
+
+.post a:hover {
+    text-decoration: underline;
+}
+
+.post button:active {
+    background-color: #02c39a;
+}
+
+.post:nth-of-type(2n) {
+    background-color: #dfe8dc;
+}
