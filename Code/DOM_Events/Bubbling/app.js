@@ -5,6 +5,7 @@ button.addEventListener('click', function (e) {
     container.style.backgroundColor = makeRandColor();
     e.stopPropagation();
 })
+
 container.addEventListener('click', function () {
     container.classList.toggle('hide');
 })
