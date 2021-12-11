@@ -5,15 +5,16 @@ const fakeRequest = (url) => {
             if (rand < 0.7) {
                 resolve('YOUR FAKE DATA HERE');
             }
-            reject('Request Error!');
+            reject('REQUEST ERROR!');
         }, 1000)
     })
 }
 
+
 fakeRequest('/dogs/1')
     .then((data) => {
         console.log("DONE WITH REQUEST!")
-        console.log('data is:', data)
+        console.log("DATA IS:", data)
     })
     .catch((err) => {
         console.log("OH NO!", err)
@@ -53,7 +54,6 @@ const delayedColorChange = (color, delay) => {
     })
 }
 
-
 delayedColorChange('red', 1000)
     .then(() => delayedColorChange('orange', 1000))
     .then(() => delayedColorChange('yellow', 1000))
@@ -61,3 +61,4 @@ delayedColorChange('red', 1000)
     .then(() => delayedColorChange('blue', 1000))
     .then(() => delayedColorChange('indigo', 1000))
     .then(() => delayedColorChange('violet', 1000))
+

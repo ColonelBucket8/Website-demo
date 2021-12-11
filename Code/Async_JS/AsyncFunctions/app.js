@@ -3,7 +3,6 @@
 
 
 const sing = async () => {
-    throw "OH NO, PROBLEM!"
     return 'LA LA LA LA'
 }
 
@@ -16,23 +15,20 @@ sing()
         console.log(err)
     })
 
-
-
-
 const login = async (username, password) => {
     if (!username || !password) throw 'Missing Credentials'
     if (password === 'corgifeetarecute') return 'WELCOME!'
-    throw 'Invalid Password'
+    throw 'Invalid password'
 }
 
-login('todd', 'corgifeetarecute')
+login('asdfadsf', 'corgifeetarecute')
     .then(msg => {
         console.log("LOGGED IN!")
         console.log(msg)
     })
     .catch(err => {
         console.log("ERROR!")
-        console.log(err)
+        console.log("err")
     })
 
 
@@ -101,7 +97,7 @@ async function makeTwoRequests() {
         console.log(data2);
     } catch (e) {
         console.log("CAUGHT AN ERROR!")
-        console.log("error is:", e)
+        console.log("Error is:", e)
     }
 
 }
