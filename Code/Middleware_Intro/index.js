@@ -19,7 +19,8 @@ const verifyPassword = ((req, res, next) => {
     if (password === 'chickennugget') {
         next();
     }
-    res.send('SORRY YOU NEED A PASSWORD!!!')
+    // res.send('SORRY YOU NEED A PASSWORD!!!')
+    throw new Error('Password required!')
 })
 
 // app.use((req, res, next) => {
@@ -38,6 +39,10 @@ app.get('/', (req, res) => {
     res.send('home page')
 })
 
+app.get('/error', (req, res) => {
+    chcken.fly()
+})
+
 app.get('/dogs', (req, res) => {
     console.log(`REQUEST DATE ${req.requestTime}`)
     res.send('I AM A DOG WOOF')
@@ -49,6 +54,14 @@ app.get('/secret', verifyPassword, (req, res) => {
 
 app.use((req, res) => {
     res.status(404).send('NOT FOUND!')
+})
+
+app.use((err, req, res, next) => {
+    console.log("****************")
+    console.log("*****ERROR*****")
+    console.log("****************")
+    console.log(err)
+    next(err);
 })
 
 app.listen(3000, () => {
