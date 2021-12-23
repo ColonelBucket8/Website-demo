@@ -13,7 +13,6 @@ const p2 = {
 const resetButton = document.querySelector('#reset');
 const winningScoreSelect = document.querySelector('#playto');
 const description = document.querySelector('.subtitle');
-const { q } = 'https://zenquotes.io/api/quotes/'
 
 let winningScore = 3;
 let isGameOver = false;
@@ -27,7 +26,6 @@ function updateScores(player, opponent) {
             opponent.display.classList.add('has-text-danger');
             player.button.disabled = true;
             opponent.button.disabled = true;
-            // description.textContent = q[1];
         }
         player.display.textContent = player.score;
     }
